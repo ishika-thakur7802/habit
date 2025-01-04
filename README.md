@@ -1,2 +1,2 @@
 # habit
-Habit Tracker App
+Habit Tracker App using Reactjs and Springboot
