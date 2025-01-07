@@ -1,20 +1,19 @@
 import React from 'react';
-import '../components-css/LandingPage.css';
-import Header from "./Header";
+import '../pages-css/Welcome.css';
+import Header from "../components/Header";
 
-const LandingPage=()=>{
+const Welcome=()=>{
     return(
-        <div className={'Landing-Page'}>
+        <div className={'Welcome'}>
             <section className="App-header">
                 <Header/>
             </section>
             <section className="banner">
                 <h2>welcome, user!</h2>
                 <h4>how consistent have you been lately?</h4>
-                <button>check your progress</button>
             </section>
 
         </div>
     );
 };
-export default LandingPage;
+export default Welcome;

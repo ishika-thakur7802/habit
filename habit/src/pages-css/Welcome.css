@@ -1,0 +1,26 @@
+.banner{
+    text-align: center;
+    min-height: 80vh;
+    background-color: #D91656;
+    margin: 0;
+    padding-top: 25vh;
+}
+
+.banner h2{
+    color: #F6D6D6;
+    padding-bottom: 1vh;
+
+}
+
+.banner h4{
+    color: white;
+}
+
+.banner button{
+    padding: 0.5rem;
+    background-color: #F6D6D6;
+    color: #D91656;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 5vh;
+}
