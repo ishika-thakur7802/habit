@@ -5,3 +5,34 @@
     margin: 0;
     padding-top: 25vh;
 }
+
+.banner-landing-page #m{
+    padding-right: 5vh;
+    font-size: larger;
+    color: transparent;
+    text-shadow: 0px 0px 4px  #fff;
+    text-decoration-line: line-through;
+}
+
+.banner-landing-page #d{
+    font-size: xx-large;
+    color: #F6D6D6;
+
+}
+
+.banner-landing-page h3{
+    color: #F6D6D6;
+}
+
+.banner-landing-page h4{
+    color: whitesmoke;
+}
+
+.banner-landing-page button{
+    padding: 1rem;
+    margin-top: 6vh;
+    background-color: #F6D6D6;
+    color: deeppink;
+    border-radius: 8rem;
+    border: none;
+}

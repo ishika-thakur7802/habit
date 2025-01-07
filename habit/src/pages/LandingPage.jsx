@@ -9,7 +9,7 @@ const LandingPage=()=>{
                 <Header/>
             </section>
             <section className="banner-landing-page">
-                <h2><span id={"m"}>motivated?</span><span id={"d"}>disciplined.</span> </h2>
+                <h2><span id={"m"}>motivated?</span><span id={"d"}>DISCIPLINED</span> </h2>
                 <h3>create habits that stick- your streaks, YOUR story!</h3>
                 <h4>TRACK, BUILD, THRIVE</h4>
                 <button>START NOW!</button>
