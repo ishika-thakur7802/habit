@@ -16,6 +16,7 @@ function App() {
                   <Route path={"/welcome"} element={<Welcome/>}/>
                   <Route path={"/dashboard"} element={<Dashboard/>}/>
 
+
               </Routes>
           </div>
       </Router>
