@@ -13,8 +13,6 @@ import java.util.List;
 
 @RestController
 public class HabitController {
-    @Autowired
-    private HabitRepository habitRepository;
 
     @Autowired
     private HabitService habitService;
@@ -28,11 +26,10 @@ public class HabitController {
         return this.habitService.getAllHabits();
     }
 
-    @PostMapping("/api/courses")
+    @PostMapping("/api/habit")
     public Habit saveHabit(@RequestBody Habit habit)
     {
         return this.habitService.saveHabit(habit);
     }
-
 
 }

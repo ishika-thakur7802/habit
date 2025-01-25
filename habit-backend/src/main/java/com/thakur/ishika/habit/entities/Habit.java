@@ -16,7 +16,7 @@ public class Habit{
     private String habit_description;
     //frequency enum which suggests the type of frequency the habit is to be followed
     @Enumerated(EnumType.STRING)
-    @Column(name = "habit_freq", nullable = false)
+    @Column(name = "habit_freq")
     private frequency habit_freq;
 
     @Column(name = "habit_streak_current", nullable = false)
@@ -94,5 +94,6 @@ public class Habit{
     public void setHabit_completion_rate(double habit_completion_rate) {
         this.habit_completion_rate = habit_completion_rate;
     }
+
 }
 
