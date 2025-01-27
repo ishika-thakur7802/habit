@@ -31,6 +31,10 @@ public class Habit{
     @Column(name = "habit_completion_rate", nullable = false)
     private double habit_completion_rate;
 
+    @ManyToOne(fetch= FetchType.LAZY)
+    @JoinColumn(name = "id")
+    private User user;
+
     public long getId() {
         return id;
     }

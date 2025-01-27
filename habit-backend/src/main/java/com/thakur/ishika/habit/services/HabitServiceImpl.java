@@ -21,6 +21,11 @@ public class HabitServiceImpl implements HabitService{
         return this.habitRepository.save(habit);
     }
 
+    public long countHabits()
+    {
+       return habitRepository.count();
+    }
+
 }
 
 

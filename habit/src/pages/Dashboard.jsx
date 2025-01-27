@@ -7,4 +7,5 @@ const Dashboard=()=>{
         <Header/>
     );
 };
+
 export default Dashboard;
