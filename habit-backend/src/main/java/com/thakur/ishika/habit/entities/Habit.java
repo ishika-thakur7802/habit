@@ -32,7 +32,7 @@ public class Habit{
     private double habit_completion_rate;
 
     @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "userid_habit")
     private User user;
 
     public long getId() {
