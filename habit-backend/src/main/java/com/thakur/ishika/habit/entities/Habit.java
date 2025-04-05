@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class Habit{
 
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

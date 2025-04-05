@@ -17,6 +17,7 @@ public class HabitController {
     @Autowired
     private HabitService habitService;
 
+
     @GetMapping("/home")
     public String home() { return "Welcome to Habit"; }
 
