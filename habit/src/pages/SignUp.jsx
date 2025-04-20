@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages-css/LandingPage.css';
+import '../pages-css/SignUp.css';
 import Header from "../components/Header";
 import {Link} from "react-router-dom";
 import { useState } from "react";
@@ -85,40 +85,61 @@ const SignUp = () => {
                 <Header/>
             </section>
             <div className={'container-su'}>
+                <div className="circle-1"></div>
+                <div className="circle-2"></div>
+                <div className="circle-3"></div>
                 <div className={'sign-up-box'}>
-                    <div className={'hello'}>
-                        <h2>Hello There!</h2>
-                        <h4>Build that Habit NOW!</h4>
-                    </div>
                     <div className={'Ques-Fields'}>
+                        <div className={'hello'}>
+                            <h2>Hello There!</h2>
+                            <h4>Build that Habit NOW!</h4>
+                        </div>
                         <form onSubmit={handleSubmit}>
-                            <input onBlur={handleOnBlur}
-                                   onChange={(e)=>setFormData(prevState => ({...prevState, [e.target.name]:e.target.value}))}
-                                   value={formData.name}
-                                   type={"text"}
-                                   placeholder={"Name"}
-                                   name={"name"}
-                                   id={"name"}/>
-                            <p>{error.name}</p>
+                            <div className={'inputContainer'}>
+                                <input onBlur={handleOnBlur}
+                                       onChange={(e) => setFormData(prevState => ({
+                                           ...prevState,
+                                           [e.target.name]: e.target.value
+                                       }))}
+                                       value={formData.name}
+                                       className={'input-field'}
+                                       type={"text"}
+                                       placeholder={"Name"}
+                                       name={"name"}
+                                       id={"name"}/>
+                                <p>{error.name}</p>
+                            </div>
 
-                            <input onBlur={(handleOnBlur)}
-                                   onChange={(e)=>setFormData(prevState => ({...prevState, [e.target.name]:e.target.value}))}
-                                   value={formData.email}
-                                   type={"text"}
-                                   placeholder={"E-Mail"}
-                                   name={"email"}
-                                   id={"email"}/>
-                            <p>{error.email}</p>
-                            <input onBlur={handleOnBlur}
-                                   onChange={(e)=>setFormData(prevState => ({...prevState, [e.target.name]:e.target.value}))}
-                                   value={formData.password}
-                                   type={"password"}
-                                   placeholder={"Password"}
-                                   name={"password"}
-                                   id={"password"}/><br/>
-                            <p>{error.password}</p>
+                            <div className={'inputContainer'}>
+                                <input onBlur={(handleOnBlur)}
+                                       onChange={(e) => setFormData(prevState => ({
+                                           ...prevState,
+                                           [e.target.name]: e.target.value
+                                       }))}
+                                       value={formData.email}
+                                       className={'input-field'}
+                                       type={"text"}
+                                       placeholder={"E-Mail"}
+                                       name={"email"}
+                                       id={"email"}/>
+                                <p>{error.email}</p>
+                            </div>
+                            <div className={'inputContainer'}>
+                                <input onBlur={handleOnBlur}
+                                       onChange={(e) => setFormData(prevState => ({
+                                           ...prevState,
+                                           [e.target.name]: e.target.value
+                                       }))}
+                                       value={formData.password}
+                                       className={'input-field'}
+                                       type={"password"}
+                                       placeholder={"Password"}
+                                       name={"password"}
+                                       id={"password"}/><br/>
+                                <p>{error.password}</p>
+                            </div>
 
-                            <input type={"submit"} value={"LESGO"} disabled={isFormInvalid()}/>
+                                <input type={"submit"} value={"LESGO"} disabled={isFormInvalid()}/>
                         </form>
                     </div>
                 </div>
