@@ -16,9 +16,9 @@ const SignUp = () => {
     //     password:""
     // });
     const[error, setError]=useState({
-        name:"",
-        email:"",
-        password:""
+        name:"Name",
+        email:"Email",
+        password:"Password"
     })
     const handleOnBlur=(e)=>
     {
@@ -104,10 +104,10 @@ const SignUp = () => {
                                        value={formData.name}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={"Name"}
+                                       placeholder={error.name}
                                        name={"name"}
                                        id={"name"}/>
-                                <p>{error.name}</p>
+                                {/*<p>{error.name}</p>*/}
                             </div>
 
                             <div className={'inputContainer'}>
@@ -119,10 +119,10 @@ const SignUp = () => {
                                        value={formData.email}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={"E-Mail"}
+                                       placeholder={error.email}
                                        name={"email"}
                                        id={"email"}/>
-                                <p>{error.email}</p>
+                                {/*<p>{error.email}</p>*/}
                             </div>
                             <div className={'inputContainer'}>
                                 <input onBlur={handleOnBlur}
@@ -133,13 +133,15 @@ const SignUp = () => {
                                        value={formData.password}
                                        className={'input-field'}
                                        type={"password"}
-                                       placeholder={"Password"}
+                                       placeholder={error.password}
                                        name={"password"}
                                        id={"password"}/><br/>
-                                <p>{error.password}</p>
+                                {/*<p>{error.password}</p>*/}
+                            </div>
+                            <div className={"submit"}>
+                                <input type={"submit"} value={"Let's Begin"} disabled={isFormInvalid()} className={"submit-btn"}/>
                             </div>
 
-                                <input type={"submit"} value={"LESGO"} disabled={isFormInvalid()}/>
                         </form>
                     </div>
                 </div>

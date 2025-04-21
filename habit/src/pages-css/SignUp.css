@@ -18,8 +18,8 @@
 
 .hello h2 {
     font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(to right, red, darkred);
+    font-weight: 900;
+    background:  darkred;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -28,7 +28,7 @@
 .hello h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #D91656;
+    color: crimson;
     margin-top: 10px;
 }
 .Ques-Fields{
@@ -84,7 +84,7 @@
     border-radius: 50%;
 }
 .input-field{
-    width: 80%;
+    width: 90%;
     padding: 12px 16px;
     margin-bottom: 20px;
     border: none;
@@ -104,4 +104,24 @@
     border: 2px solid #D91656;
     background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 0 10px rgba(217, 22, 86, 0.5);
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.submit-btn{
+    margin: auto;
+    padding: 0.7rem;
+    width: 25%;
+    background: white;
+    color: #D91656;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+}
+.submit-btn:hover{
+    background: #D91656;
+    color: white;
+    transition: ease-in 0.3s;
 }
