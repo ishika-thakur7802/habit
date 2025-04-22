@@ -14,8 +14,8 @@ const LandingPage=()=>{
                 <h2><span id={"m"}>motivated?</span><span id={"d"}>DISCIPLINED</span> </h2>
                 <h3>create habits that stick- your streaks, YOUR story!</h3>
                 <h4>TRACK, BUILD, THRIVE </h4>
-                    <Link To={"/signup"}>
-                        <button>START NOW!</button>
+                    <Link to={"/signup"}>
+                        <button className={"startnow"}>START NOW!</button>
                     </Link>
 
             </section>

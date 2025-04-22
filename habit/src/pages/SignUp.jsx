@@ -16,14 +16,20 @@ const SignUp = () => {
     //     password:""
     // });
     const[error, setError]=useState({
-        name:"Name",
-        email:"Email",
-        password:"Password"
+        name:"",
+        email:"",
+        password:""
+    })
+    const[touched, setTouched]=useState({
+        name:false,
+        email:false,
+        password:false
     })
     const handleOnBlur=(e)=>
     {
 
         const{name,value}=e.target;
+        setTouched(prevState => ({...prevState, [name]:true}));
 
         if(name==="name")
         {
@@ -91,8 +97,8 @@ const SignUp = () => {
                 <div className={'sign-up-box'}>
                     <div className={'Ques-Fields'}>
                         <div className={'hello'}>
-                            <h2>Hello There!</h2>
-                            <h4>Build that Habit NOW!</h4>
+                            <h2>hello there!</h2>
+                            <h4>build that habit NOW!</h4>
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div className={'inputContainer'}>
@@ -101,10 +107,10 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={formData.name}
+                                       value={touched.name && error.name!=="Looks Good!"? "": formData.name}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={error.name}
+                                       placeholder={touched.name && error.name!="Looks Good!"?error.name:"Name"}
                                        name={"name"}
                                        id={"name"}/>
                                 {/*<p>{error.name}</p>*/}
@@ -116,10 +122,10 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={formData.email}
+                                       value={touched.email && error.email!="Looks Good"? "":formData.email}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={error.email}
+                                       placeholder={touched.email && error.email!="Looks Good"?formData.email:"Email"}
                                        name={"email"}
                                        id={"email"}/>
                                 {/*<p>{error.email}</p>*/}
@@ -130,10 +136,10 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={formData.password}
+                                       value={touched.password && error.password!="That's a strong password"?"":formData.password}
                                        className={'input-field'}
                                        type={"password"}
-                                       placeholder={error.password}
+                                       placeholder={touched.password && error.password!="That's a strong password"?error.password:"Password"}
                                        name={"password"}
                                        id={"password"}/><br/>
                                 {/*<p>{error.password}</p>*/}
@@ -144,6 +150,7 @@ const SignUp = () => {
 
                         </form>
                     </div>
+                    <p>Have an account already? Sign In</p>
                 </div>
 
             </div>

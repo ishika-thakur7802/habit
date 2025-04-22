@@ -37,3 +37,18 @@
     border-radius: 8rem;
     border: none;
 }
+.startnow{
+    padding: 1rem;
+    background: white;
+    color: #D91656;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+}
+.startnow:hover{
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: ease-in 0.3s;
+}
