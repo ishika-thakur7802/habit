@@ -20,6 +20,7 @@ const LandingPage=()=>{
 
             </section>
 
+
         </div>
     );
 };

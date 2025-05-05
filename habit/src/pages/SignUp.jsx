@@ -107,10 +107,10 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={touched.name && error.name!=="Looks Good!"? "": formData.name}
+                                       value={touched.name && error.name !== "Looks Good!" ? "" : formData.name}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={touched.name && error.name!="Looks Good!"?error.name:"Name"}
+                                       placeholder={touched.name && error.name != "Looks Good!" ? error.name : "Name"}
                                        name={"name"}
                                        id={"name"}/>
                                 {/*<p>{error.name}</p>*/}
@@ -122,10 +122,10 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={touched.email && error.email!="Looks Good"? "":formData.email}
+                                       value={touched.email && error.email != "Looks Good" ? "" : formData.email}
                                        className={'input-field'}
                                        type={"text"}
-                                       placeholder={touched.email && error.email!="Looks Good"?formData.email:"Email"}
+                                       placeholder={touched.email && error.email != "Looks Good" ? formData.email : "Email"}
                                        name={"email"}
                                        id={"email"}/>
                                 {/*<p>{error.email}</p>*/}
@@ -136,21 +136,24 @@ const SignUp = () => {
                                            ...prevState,
                                            [e.target.name]: e.target.value
                                        }))}
-                                       value={touched.password && error.password!="That's a strong password"?"":formData.password}
+                                       value={touched.password && error.password != "That's a strong password" ? "" : formData.password}
                                        className={'input-field'}
                                        type={"password"}
-                                       placeholder={touched.password && error.password!="That's a strong password"?error.password:"Password"}
+                                       placeholder={touched.password && error.password != "That's a strong password" ? error.password : "Password"}
                                        name={"password"}
                                        id={"password"}/><br/>
                                 {/*<p>{error.password}</p>*/}
                             </div>
                             <div className={"submit"}>
-                                <input type={"submit"} value={"Let's Begin"} disabled={isFormInvalid()} className={"submit-btn"}/>
+                                <input type={"submit"} value={"Let's Begin"} disabled={isFormInvalid()}
+                                       className={"submit-btn"}/>
                             </div>
 
                         </form>
                     </div>
-                    <p>Have an account already? Sign In</p>
+                    <div className={'signinreq'}>
+                        <Link to={'SignIn'}><p>Have an account already? Sign In</p></Link>
+                    </div>
                 </div>
 
             </div>
