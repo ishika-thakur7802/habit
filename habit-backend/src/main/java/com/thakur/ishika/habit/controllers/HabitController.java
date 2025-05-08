@@ -18,8 +18,6 @@ public class HabitController {
     private HabitService habitService;
 
 
-    @GetMapping("/home")
-    public String home() { return "Welcome to Habit"; }
 
     @GetMapping("/api/habits")
     public List<Habit> getAllHabits()

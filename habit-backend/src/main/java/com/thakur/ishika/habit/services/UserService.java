@@ -5,7 +5,7 @@ import com.thakur.ishika.habit.entities.User;
 import java.util.List;
 
 public interface UserService {
-    List<User> findAll();
+    List<User> findUsers();
     User save(User user);
     User findByUserId(int user_id);
     User findByEmail(String email);
