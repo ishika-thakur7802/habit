@@ -12,7 +12,6 @@ import java.util.Set;
 public class User{
     @Id
     private int user_id;
-    private String username;
     private String password;
 
     private String email;
